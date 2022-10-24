@@ -1,11 +1,11 @@
 import React from "react";
-import './Button.css';
+import './Button.scss';
 
 const Button = ()=>{
     return (
-        <div>
-            <button>Adicionar</button>
-        </div>
+     
+            <button className="botao">Adicionar</button>
+      
     );
 }
 

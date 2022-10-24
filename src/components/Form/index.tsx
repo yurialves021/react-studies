@@ -1,13 +1,13 @@
 import React from "react";
-import './Form.css';
+import './Form.scss';
 import Button from '../Button/';
 
 
 const Form = () => {
     return (
 
-        <form>
-            <div>
+        <form className="novaTarefa">
+            <div className="inputContainer">
                 <label htmlFor="tarefa">Adicione um novo estudo</label>
           
                 <input
@@ -17,7 +17,7 @@ const Form = () => {
                     id="tarefa"
                     required />
             </div>
-            <div>
+            <div className="inputContainer">
                 <label htmlFor="tempo">Tempo</label>
                 <input
                     type="time"

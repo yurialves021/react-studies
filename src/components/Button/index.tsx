@@ -1,10 +1,10 @@
 import React from "react";
-import './Button.scss';
+import style from './Button.module.scss';
 
 const Button = ()=>{
     return (
      
-            <button className="botao">Adicionar</button>
+            <button className={style.botao}>Adicionar</button>
       
     );
 }

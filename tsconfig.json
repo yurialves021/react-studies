@@ -21,7 +21,7 @@
     "jsx": "react-jsx",
     "plugin": [
       {
-        "name": "typescript-plugin-css-moddules"
+        "name": "typescript-plugin-css-modules"
       }
     ]
   },

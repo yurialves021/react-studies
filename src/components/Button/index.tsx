@@ -1,12 +1,12 @@
 import React from "react";
 import style from './Button.module.scss';
 
-const Button = (props : {children: string}) => {
+const Button = (props : {children: string, type?: "button" | "submit" | "reset" | undefined}) => {
 
-    const {children} = props; 
+    const {children, type = "button"} = props; 
 
     return (
-        <button className={style.botao}>{children}</button>
+        <button type={type} className={style.botao}>{children}</button>
     );
 }
 

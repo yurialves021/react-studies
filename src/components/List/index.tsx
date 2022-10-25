@@ -1,19 +1,10 @@
-import React from "react";
 import style from './List.module.scss';
 import Items from './Items';
+import {ITarefa} from '../../types/ITarefa';
 
-const List = () => {
+const List = (props: { tarefas: ITarefa[] }) => {
 
-    const tarefas = [
-        {
-            tarefa: 'React',
-            tempo: '02:00:00'
-        },
-        {
-            tarefa: 'Javascript',
-            tempo: '01:00:00'
-        }
-    ];
+    const { tarefas } = props;
 
     return (
         <aside className={style.listaTarefas}>

@@ -1,11 +1,12 @@
 import React from "react";
 import style from './Button.module.scss';
 
-const Button = ()=>{
+const Button = (props : {children: string}) => {
+
+    const {children} = props; 
+
     return (
-     
-            <button className={style.botao}>Adicionar</button>
-      
+        <button className={style.botao}>{children}</button>
     );
 }
 

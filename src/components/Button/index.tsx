@@ -19,4 +19,4 @@ function Button({ onClick, type, children }: Props) {
   )
 }
 
-export default Botao;
+export default Button;

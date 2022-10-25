@@ -1,6 +1,7 @@
 import style from './Stopwatch.module.scss';
 import Button from "../Button";
 import { ITarefa } from '../../types/ITarefa';
+import { tempoParaSegundos } from "../../common/utils/time";
 import Watch from "./Watch";
 import {useState, useEffect} from 'react';
 

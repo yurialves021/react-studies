@@ -1,8 +1,7 @@
 import style from '../List.module.scss';
+import {ITarefa} from '../../../types/ITarefa';
 
-const Items = (props: { tarefa: string, tempo: string }) => {
-
-    const { tarefa, tempo } = props;
+const Items = ({tarefa,tempo,selecionado,completado,id} : ITarefa) => {
 
     return (
         <li className={style.item}>

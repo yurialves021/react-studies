@@ -2,19 +2,28 @@ import React, { useState, FormEvent, Dispatch, SetStateAction } from "react";
 import style from './Form.module.scss';
 import Button from '../Button/';
 import { ITarefa } from '../../types/ITarefa';
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = (props: {
-    setTarefas: Dispatch<SetStateAction<ITarefa[]>>}) => {
+    setTarefas: Dispatch<SetStateAction<ITarefa[]>>
+}) => {
 
-    const {setTarefas} = props;
+    const { setTarefas } = props;
 
     const [tarefa, setTarefa] = useState('');
     const [tempo, setTempo] = useState('00:00:00');
+    const [selecionado, setSelecionado] = useState(false);
+    const [completado, setCompletado] = useState(false);
 
     const adcionarTarefa = (e: FormEvent) => {
         e.preventDefault();
 
-        setTarefas(tarefas => [...tarefas, {tarefa,tempo}]);
+        setTarefas(tarefas => [...tarefas, { tarefa, tempo, id: uuidv4(), selecionado, completado }]);
+
+       
+        setTarefa('');
+        setTempo('00:00')
+
 
     };
 

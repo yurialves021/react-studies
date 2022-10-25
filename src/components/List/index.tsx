@@ -15,6 +15,9 @@ const List = (props: { tarefas: ITarefa[] }) => {
                         tarefa={item.tarefa}
                         tempo={item.tempo}
                         key={index}
+                        selecionado={item.selecionado}
+                        completado={item.completado}
+                        id={item.id}
                     />);
 
                 })}

@@ -22,7 +22,7 @@ function App() {
 
   //Função para finalizar as tarefas concluídas
   function finalizarTarefa() {
-    //caso o estado selecionado esteja true, irá colocar undefined novamente
+    //caso o estado selecionado esteja true, irá colocar undefined novamente pois não terá mais nada selecionado
     if (selecionado) {
       setSelecionado(undefined);
       //adicionar ao estado de tarefas a array de tarefas onde a tarefa que havia sido selecionada recebera true no completado e o selecionado retorna para false

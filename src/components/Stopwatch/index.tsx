@@ -23,6 +23,8 @@ export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
     }
   },[selecionado]);
 
+  //função para decrementar o relogio, recebe um tempo tipado para number e a cada 1 segundo 
+  //verifica se o tempo é maior que 0, caso ainda seja subtrai - 1 ate chegar a 0, chegando a 0 chama a funçao para finalizar a tarefa
   function regressiva(contador: number = 0) {
     setTimeout(() => {
       if(contador > 0) {

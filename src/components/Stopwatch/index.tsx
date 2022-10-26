@@ -7,11 +7,14 @@ import {useState, useEffect} from 'react';
 
 
 interface Props {
+  //necessário essa condição pois o selecionado sempre inicia como undefined
   selecionado: ITarefa | undefined,
   finalizarTarefa: () => void
 }
 
 export default function Cronometro({ selecionado, finalizarTarefa }: Props) {
+  
+  //Criei para decrementar o tempo do cronometro, por isso tipado com Number
   const [tempo, setTempo] = useState<number>();
 
   useEffect(() => {

@@ -4,13 +4,16 @@ import Button from '../Button/';
 import { ITarefa } from '../../types/ITarefa';
 import { v4 as uuidv4 } from 'uuid';
 
+
 interface Props {
+
     setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
 }
 
 function Form({ setTarefas }: Props) {
     const [tarefa, setTarefa] = useState("");
     const [tempo, setTempo] = useState("00:00");
+    
     function adicionarTarefa(evento: React.FormEvent<HTMLFormElement>) {
         evento.preventDefault();
         setTarefas(tarefasAntigas =>
@@ -21,7 +24,7 @@ function Form({ setTarefas }: Props) {
                     tempo,
                     selecionado: false,
                     completado: false,
-                    id: uuidv4()
+                    id: uuidv4() //biblioteca utilizada pra gerar um id automatico e aleatorio
                 }
             ]
         )
